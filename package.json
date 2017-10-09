@@ -6,7 +6,7 @@
   "scripts": {
     "start": "parallelshell \"npm run sync\" \"npm run css:watch\"",
     "css:watch": "postcss ./postcss/*.css -o ./style.css -w",
-    "sync": "browser-sync start --server --files \"./style.css ./bundle.js ./**/*.php ./**/*.png ./**/*.svg ./**/*.jpg\""
+    "sync": "node server.js"
   },
   "author": "Obara Chiaki",
   "license": "MIT",

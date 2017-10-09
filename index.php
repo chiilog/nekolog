@@ -8,4 +8,6 @@
 get_header();
 ?>
 
+あういえおおおおaaaas
+
 <?php get_footer(); ?>
