@@ -10,8 +10,11 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width">
-	<link rel="stylesheet" href="wp-content/themes/nekolog/style.css">
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-aaaaaaaa
+	<header id="header" class="header">
+		<div class="header-image">
+			<img src="<?php echo get_template_directory_uri(); ?>/images/404.jpg" alt="">
+		</div>
+	</header>
