@@ -1,0 +1,32 @@
+{
+  "name": "chiakirun",
+  "version": "1.0.0",
+  "description": "npm-scripts taskrunner",
+  "main": "index.html",
+  "scripts": {
+    "start": "parallelshell \"npm run sync\" \"npm run css:watch\"",
+    "css:watch": "postcss ./postcss/*.css -o ./style.css -w",
+    "sync": "browser-sync start --server --files \"./style.css ./bundle.js ./**/*.php ./**/*.png ./**/*.svg ./**/*.jpg\""
+  },
+  "author": "Obara Chiaki",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^7.1.5",
+    "browser-sync": "^2.18.13",
+    "csswring": "^6.0.1",
+    "parallelshell": "^3.0.1",
+    "postcss-cli": "^4.1.1",
+    "postcss-color-function": "^4.0.0",
+    "postcss-custom-media": "^6.0.0",
+    "postcss-custom-properties": "^6.2.0",
+    "postcss-extend": "^1.0.5",
+    "postcss-import": "^11.0.0",
+    "postcss-load-config": "^1.2.0",
+    "postcss-mixins": "^6.1.1",
+    "postcss-nested": "^2.1.2",
+    "postcss-reporter": "^5.0.0",
+    "stylelint": "^8.2.0",
+    "stylelint-config-standard": "^17.0.0",
+    "watch": "^1.0.2"
+  }
+}
