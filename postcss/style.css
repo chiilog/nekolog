@@ -14,14 +14,15 @@ Text Domain: nekolog
 /* ========================================================================== */
 /* Foundation */
 /* ========================================================================== */
-@import "foundation/normalize.css";
-@import "foundation/base.css";
+@import "foundation/_variable.css";
+@import "foundation/_normalize.css";
+@import "foundation/_base.css";
 
 /* ========================================================================== */
 /* Layout */
 /* ========================================================================== */
-@import "layout/footer.css";
-@import "layout/header.css";
+@import "layout/_footer.css";
+@import "layout/_header.css";
 
 /* ========================================================================== */
 /* Object */
@@ -37,4 +38,4 @@ Text Domain: nekolog
 /* ----------------------------------------------------------------- */
 /* Utility */
 /* ----------------------------------------------------------------- */
-@import "object/utility/clearfix.css";
+@import "object/utility/_clearfix.css";

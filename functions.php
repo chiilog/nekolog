@@ -21,6 +21,7 @@ if ( ! function_exists( 'nekolog_after_setup_theme' ) ) {
 	* @since Nekolog 1.0
 	*/
 	function nekolog_after_setup_theme() {
+		load_theme_textdomain( 'nekolog' );
 		add_editor_style();
 		add_theme_support( 'post-thumbnails' );
 		add_theme_support( 'automatic-feed-links' );
@@ -29,6 +30,10 @@ if ( ! function_exists( 'nekolog_after_setup_theme' ) ) {
 			'height'      => 100,
 			'width'       => 400,
 			'flex-width'  => true,
+		) );
+
+		register_nav_menus( array(
+			'primary' => __( 'Primary Menu', 'nekolog' ),
 		) );
 	}
 }

@@ -1,0 +1,7 @@
+@custom-media --mobile (max-width:544px);
+@custom-media --tablet (min-width:768px);
+@custom-media --pc (min-width:1100px);
+
+:root {
+	--mainColor: #222;
+}
