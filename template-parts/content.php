@@ -6,10 +6,16 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>">
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<!-- entry-header -->
 	<header class="entry-header">
-		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+		<?php
+			if ( is_singular() ) {
+					the_title( '<h1 class="entry-title">', '</h1>' );
+			} else {
+					the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+			}
+		?>
 	</header>
 	<!-- .entry-header -->
 
@@ -17,7 +23,7 @@
 		<!-- entry content -->
 		<?php
 			/* php code from _s */
-			if ( in_the_loop() ) {
+			if ( in_the_loop() && !is_singular() ) {
 				the_excerpt( sprintf(
 					/* translators: %s: Name of current post. */
 					wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'nekolog' ), array( 'span' => array( 'class' => array() ) ) ),
