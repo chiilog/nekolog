@@ -1,0 +1,15 @@
+.site-content-contain {
+	margin: 30px auto;
+
+	@media (--tablet) {
+		width: 90%;
+	}
+}
+
+.site-content {
+	@media (--tablet) {
+		column-count: 3;
+		column-gap: 15px;
+		column-fill: auto;
+	}
+}

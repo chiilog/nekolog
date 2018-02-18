@@ -1,4 +1,4 @@
-.u-clearfix::after {
+.clearfix::after {
 	content: "";
 	clear: both;
 	display: block;
